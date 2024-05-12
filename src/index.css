@@ -5,8 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
 :root {
-  --primary: #12bca2;
-  --secondary: #6d15df;
+  --primary: #000000;
+  --secondary: #f9f9f9;
 }
 h1,h2,h3 {
   margin: 0;
