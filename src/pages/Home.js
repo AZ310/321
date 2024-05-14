@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import  supabase  from '../config/supabaseClient';
+import supabase from '../config/supabaseClient';
+import { useAuth } from './AuthContext';
 
 const HomeComponent = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [searchError, setSearchError] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn } = useAuth(); // Use the useAuth hook to get isLoggedIn
   const navigate = useNavigate();
 
   useEffect(() => {
     const checkUserSession = async () => {
       try {
         const user = supabase.auth.user();
-        setIsLoggedIn(user !== null);
+        setSearchResults(user !== null); // Update setSearchResults instead of setIsLoggedIn
       } catch (error) {
         console.error('Error checking user session:', error.message);
       }
     };
 
     checkUserSession();
-  }, []);;
-  
+  }, []); // Remove the extra semicolon at the end of the useEffect
 
   const handleSearchFlights = async (e) => {
     e.preventDefault();
@@ -48,13 +48,9 @@ const HomeComponent = () => {
         setSearchResults(data);
         setSearchError(''); // Clear search error if successful
       }
-      
-      // if(!leavingFrom || !target || !departureDate || !returnDate){
-      //   setSearchError('Please fill in the required fields correctly')
-      // }
     } catch (error) {
       console.error('Error searching flights:', error.message);
-      setSearchError('Please fill in the required fields correctly')
+      setSearchError('Please fill in the required fields correctly');
     }
   };
 
@@ -89,13 +85,13 @@ const HomeComponent = () => {
       {/* Main Content */}
       <main className="py-8 flex flex-col justify-center items-center text-center mx-auto w-4/5">
         <div className="flex flex-col justify-start items-center">
-        <div>
-                    <img class="rounded-3xl" src="img/background.avif" alt=""></img>
-                </div>
-                <div class="absolute left-52 top-40">
-                    <h1 class="font-bold text-6xl object-left text-gray-800 mb-2">Fly Anywhere </h1>
-                    <h1 class="text-gray-600 text-xl">Fly Budget And Comfortably</h1>
-                </div>
+          <div>
+            <img className="rounded-3xl" src="img/background.avif" alt="" />
+          </div>
+          <div className="absolute left-52 top-40">
+            <h1 className="font-bold text-6xl object-left text-gray-800 mb-2">Fly Anywhere </h1>
+            <h1 className="text-gray-600 text-xl">Fly Budget And Comfortably</h1>
+          </div>
           {/* Search Form */}
           <form onSubmit={handleSearchFlights} className="bg-white w-11/12 rounded-3xl px-6 py-4 mt-4 border border-gray-300 overflow-hidden">
             <div className="text-left flex">
