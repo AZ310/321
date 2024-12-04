@@ -67,11 +67,11 @@ const HomeComponent = () => {
       {/* Content Wrapper */}
       <div className="flex justify-between px-3 items-center border-b-2 border-gray-300">
         <Link to="/" className="flex items-center cursor-pointer">
-          <img className="w-14" src="img/pngtree-circle-travel-plane-logo-template-in-blacn-and-white-image_55579.jpg" alt="website-logo" />
-          <span className="font-bold px-0">FlyBase</span>
+          <img className="w-6" src="img/train.jpg" alt="website-logo" />
+          <span className="font-bold px-0">TSM</span>
         </Link>
         <div>
-          <h1 className="font-bold">Welcome to FlyBase</h1>
+          <h1 className="font-bold">Welcome to TSM</h1>
         </div>
         <nav className="flex justify-start items-center">
           <div className="mr-3 pr-3 border-r border-gray-800">
@@ -86,11 +86,11 @@ const HomeComponent = () => {
       <main className="py-8 flex flex-col justify-center items-center text-center mx-auto w-4/5">
         <div className="flex flex-col justify-start items-center">
           <div>
-            <img className="rounded-3xl" src="img/background.avif" alt="" />
+            <img className="rounded-3xl " src="img/Train background.webp" alt="" />
           </div>
           <div className="absolute left-52 top-40">
-            <h1 className="font-bold text-6xl object-left text-gray-800 mb-2">Fly Anywhere </h1>
-            <h1 className="text-gray-600 text-xl">Fly Budget And Comfortably</h1>
+            <h1 className="font-bold text-6xl object-left text-gray-800 mb-2">Travel Anywhere </h1>
+            <h1 className="text-black text-xl">Anytime!</h1>
           </div>
           {/* Search Form */}
           <form onSubmit={handleSearchFlights} className="bg-white w-11/12 rounded-3xl px-6 py-4 mt-4 border border-gray-300 overflow-hidden">

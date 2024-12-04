@@ -12,8 +12,8 @@ const AddTicketAdmin = () => {
         <div> {/* Content Wrapper */}
             <div className="flex justify-between px-3 items-center border-b-2 border-gray-300"> {/* Navigation Bar */}
                 <Link to="/" className="flex items-center cursor-pointer"> {/* Link for the logo */}
-                    <img className="w-14" src="img/pngtree-circle-travel-plane-logo-template-in-blacn-and-white-image_55579.jpg" alt="website-logo" />
-                    <span className="font-bold px-0">FlyBase</span>
+                    <img className="w-14" src="img/train.jpg" alt="website-logo" />
+                    <span className="font-bold px-0">TSM</span>
                 </Link>
                 <div className="ml-24">
                     <h1 className="font-bold">

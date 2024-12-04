@@ -53,11 +53,11 @@ const LoginComponent = () => {
     <div>
       <div className="flex justify-between px-3 items-center border-b-2 border-gray-300">
         <Link to="/" className="flex items-center cursor-pointer">
-          <img className="w-14" src="img/pngtree-circle-travel-plane-logo-template-in-blacn-and-white-image_55579.jpg" alt="website-logo" />
-          <span className="font-bold px-0">FlyBase</span>
+          <img className="w-14" src="img/train.jpg" alt="website-logo" />
+          <span className="font-bold px-0">TSM</span>
         </Link>
         <div>
-          <h1 className="font-bold">Welcome to FlyBase</h1>
+          <h1 className="font-bold">Welcome to TSM</h1>
         </div>
         <nav>
           {/* Links will disappear after successful login */}

@@ -48,13 +48,13 @@ function TicketList() {
             {/* Link for the logo */}
             <img
               className="w-14"
-              src="img/pngtree-circle-travel-plane-logo-template-in-blacn-and-white-image_55579.jpg"
+              src="img/train.jpg"
               alt="website-logo"
             />
-            <span className="font-bold px-0">FlyBase</span>
+            <span className="font-bold px-0">TSM</span>
           </Link>
           <div>
-            <h1 className="font-bold">Welcome to FlyBase</h1>
+            <h1 className="font-bold">Welcome to TSM</h1>
           </div>
           <div>
             <nav class="flex justify-start items-center">
